@@ -54,8 +54,9 @@ class App extends React.Component{
     const items =  this.state.items;
     items.map(item =>{
       if(item.key === key){
-        item.text=text;
+        return item.text=text;
       }
+      return item;
     })
     this.setState({
       items:items
